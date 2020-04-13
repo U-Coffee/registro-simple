@@ -1,0 +1,38 @@
+<ion-header>
+  
+</ion-header>
+
+<ion-content color="primary">
+  <ion-card>
+    <ion-card-header>
+      <ion-title>Resumen del registro</ion-title> <br>
+      <img src="assets/img/logoUni.jpg">
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item >
+          <ion-label><b>Nombre:</b> {{nameCap}}</ion-label>
+        </ion-item>
+        <ion-item >
+          <ion-label> <b> Apellido:</b> {{lastnameCap}}</ion-label>
+        </ion-item>
+        <ion-item >
+          <ion-label> <b> Documento: </b> {{documentPickCap}}: {{idCap}}</ion-label>
+        </ion-item> 
+        <ion-item >
+          <ion-label> <b> Fecha de nacimiento:</b> {{dateCap}}</ion-label>
+        </ion-item>
+        <ion-item >
+          <ion-label> <b> Carrera:</b> {{studyCap}}</ion-label>
+        </ion-item>
+        <ion-item>
+          <p id="description">
+            {{description}}
+          </p>
+        </ion-item>
+      </ion-list>
+      <ion-button expand="full" routerLink="/home">Volver</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

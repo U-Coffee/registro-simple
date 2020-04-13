@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <!--<ion-toolbar color="primary">
+    <ion-title>
+      Registro de estudiantes
+    </ion-title>
+  </ion-toolbar>-->
+</ion-header>
+
+<ion-content [fullscreen]="true" color="primary">
+
+  <ion-card >
+
+    <ion-card-header>
+      <ion-title>Registro de Estudiantes</ion-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <br>
+      <ion-label>Nombre:</ion-label>
+      <ion-item>
+        <ion-input placeholder="Nombre" [(ngModel)]="name" autocapitalize="on"></ion-input>
+      </ion-item>
+      
+      <br>
+      <ion-label>Apellido:</ion-label>
+      <ion-item>
+        <ion-input placeholder="Apellido" [(ngModel)]="lastname" autocapitalize="on"></ion-input>
+      </ion-item>
+      <br>
+      <ion-label>Tipo de Documento:</ion-label> <br>
+      <ion-item>
+        <ion-input [(ngModel)]="documentPick" >{{document}}</ion-input>
+        <ion-button slot="start" (click)=openDocument() fill="clear" id="openDocument">
+          <ion-icon name="caret-down-circle" color="primary"></ion-icon>
+        </ion-button>
+      
+        <ion-input placeholder="Número" [(ngModel)]="id"  maxlength="10" size="100%"></ion-input>
+      </ion-item>
+      <br>
+      <ion-label>Fecha de nacimiento</ion-label>
+      <ion-item>
+        <ion-datetime displayFormat="D/MM/YYYY" placeholder="Seleccione" [(ngModel)]="date"></ion-datetime>
+      </ion-item>
+      <br>
+      <ion-label>Carrera:</ion-label> <br>
+      <ion-item>
+        <ion-input readonly="" [(ngModel)]="studyPick" >{{study}}</ion-input>
+        <ion-button slot="start" (click)=openStudy() fill="clear">
+          <ion-icon name="caret-down-circle" color="primary"></ion-icon>
+        </ion-button>
+      </ion-item>
+
+      <ion-button expand="full" color="primary" (click)="submitGet()">Enviar</ion-button>
+
+    </ion-card-content>
+  </ion-card>
+ 
+</ion-content>
